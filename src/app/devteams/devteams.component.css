@@ -1,0 +1,13 @@
+.team_list {
+  margin-top: 3rem;
+}
+
+span {
+  padding: 1rem 0 1rem 0;
+}
+
+.member_list {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}

@@ -13,7 +13,6 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 2, name: 'sunny', guild: 'front-end'},
       {id: 3, name: 'unknown1', guild: 'back-end'},
       {id: 4, name: 'unknown2', guild: 'back-end'},
-      {id: 5, name: 'unknown3', guild: 'back-end'},
     ];
     return {teams}
   }
