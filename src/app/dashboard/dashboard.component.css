@@ -1,0 +1,30 @@
+.new_dev_container {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  all: unset;
+  padding: 1rem;
+  border: 1px solid rgb(220,220,220);
+  cursor: pointer;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+a:hover {
+  background-color: rgb(220,220,220);
+}
+
+b {
+  font-size: 1.3rem;
+}
+
+p {
+  margin: 0 0 3rem 0;
+}
+
+h2 {
+  margin: 3rem 0 0 0;
+}

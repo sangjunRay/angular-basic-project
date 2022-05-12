@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {MessageService} from "./message.service";
 import {Observable, of} from "rxjs";
 import {Team} from "./team";
-import {catchError, tap} from "rxjs/operators";
+import {catchError, tap, map} from "rxjs/operators";
 
 @Injectable()
 export class TeamService {
@@ -19,8 +19,9 @@ export class TeamService {
   }
 
   private log(message: string) {
-    this.messageService.add(`HeroService: ${message}`);
+    this.messageService.add(`system/ message.service.ts: ${message}`);
   }
+
   private teamUrl = 'api/teams';
 
 
@@ -37,8 +38,24 @@ export class TeamService {
   getTeams(): Observable<Team[]> {
     return this.http.get<Team[]>(this.teamUrl)
       .pipe(
-        tap(_ => this.log('fetched teams')),
+        tap(_ => this.log('팀 목록이 업데이트되었습니다.')),
         catchError(this.handleError<Team[]>('getTeams', []))
+      )
+  }
+
+  getTeam(id: number): Observable<Team> {
+    const url = `${this.teamUrl}/${id}`
+    return this.http.get<Team>(url).pipe(
+      tap(_ => this.log(`id:${id}의 상세페이지 접근`)),
+      catchError(this.handleError<Team>(`오류: id:${id}`))
+    )
+  }
+
+  updateTeam(team: Team): Observable<any> {
+    return this.http.put(this.teamUrl, team, this.httpOption)
+      .pipe(
+        tap(_ => this.log(`${team.name}님의 정보가 변경되었습니다.`)),
+        catchError(this.handleError<any>('updateTeam'))
       )
   }
 }

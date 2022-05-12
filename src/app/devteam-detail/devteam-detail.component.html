@@ -1,1 +1,8 @@
-<p>devteam-detail works!</p>
+<div *ngIf="team">
+  <h2>un7qi3 개발얼라이언스 "{{team.name | uppercase}}" 를/을 소개합니다 👐🏻</h2>
+  <div class="detail_container">
+    <span>id: {{team.id}}</span>
+    <span>name: {{team.name}}</span>
+    <span>guild: {{team.guild}}</span>
+  </div>
+</div>

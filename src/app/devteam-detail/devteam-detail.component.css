@@ -1,0 +1,14 @@
+.detail_container {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 3rem;
+}
+
+span {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(220,220,220);
+  padding-bottom: 1rem;
+}

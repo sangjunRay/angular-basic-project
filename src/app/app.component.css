@@ -1,0 +1,32 @@
+.header_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.global_padding {
+  padding: 0 30% 0 30%;
+}
+
+@media (max-width: 1000px) {
+  .global_padding {
+    padding: 0 5% 0 5%;
+  }
+}
+
+a {
+  all: unset;
+  padding: 0.5rem;
+  border: 1px solid black;
+  margin-right: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+a:hover {
+  background-color: black;
+  color: white;
+}

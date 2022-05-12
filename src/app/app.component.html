@@ -1,7 +1,12 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/teams">Dev teams</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<header class="header_container">
+  <img src="https://static.forceteller.com/www/images/forceteller.png"/>
+</header>
+<section class="global_padding">
+  <h1>{{title}}</h1>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/teams">All dev teams</a>
+  </nav>
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
+</section>

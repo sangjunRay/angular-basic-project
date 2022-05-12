@@ -1,0 +1,28 @@
+.message_container {
+  color: #33ff33;
+}
+
+.log_container {
+  background-color: rgb(50,50,50);
+  border-radius: 5px;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+h2 {
+  margin: 0 0 1rem 0;
+  color: white;
+}
+
+button {
+  all: unset;
+  padding: 0.5rem;
+  background-color: white;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
