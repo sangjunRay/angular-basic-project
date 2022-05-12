@@ -1,0 +1,7 @@
+<h2>Welcome Teams</h2>
+<div>
+  <a *ngFor="let team of teams" routerLink="/detail/{{team.id}}">
+    {{team.name}}
+  </a>
+</div>
+<app-devteam-search></app-devteam-search>
