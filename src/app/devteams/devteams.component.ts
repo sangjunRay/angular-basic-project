@@ -8,7 +8,7 @@ import {TeamService} from "../team.service";
   styleUrls: ['./devteams.component.css']
 })
 export class DevteamsComponent implements OnInit {
-  teams: Team[] | undefined
+  teams: Team[] = [];
 
   constructor(
     private teamService: TeamService
@@ -22,6 +22,16 @@ export class DevteamsComponent implements OnInit {
   getTeams(): void {
     this.teamService.getTeams()
       .subscribe(teams => this.teams = teams)
+  }
+
+  add(name: string, guild: string): void {
+    name = name.trim();
+    guild = guild.trim();
+    if(!name && guild) {return;}
+    this.teamService.addTeam({name, guild} as Team)
+      .subscribe(team => {
+        this.teams.push(team)
+      })
   }
 
 

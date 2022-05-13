@@ -1,0 +1,45 @@
+.search_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+label {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  all: unset;
+  padding: 1rem;
+  border: 1px solid rgb(200,200,200);
+  transition: 0.3s;
+}
+
+input:focus {
+  border: 1px solid black;
+}
+
+ul {
+  display: flex;
+  all: unset;
+  flex-direction: column;
+}
+
+li {
+  all: unset;
+}
+
+a {
+  all: unset;
+  display: block;
+  border: 1px solid rgb(200,200,200);
+  border-top: 0;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+a:hover {
+  background-color: rgb(200,200,200);
+}

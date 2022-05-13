@@ -9,10 +9,16 @@ import {Team} from "./team";
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const teams = [
-      {id: 1, name: 'ray', guild: 'front-end'},
-      {id: 2, name: 'sunny', guild: 'front-end'},
-      {id: 3, name: 'unknown1', guild: 'back-end'},
-      {id: 4, name: 'unknown2', guild: 'back-end'},
+      {id: 1, name: 'jim', guild: 'CTO'},
+      {id: 2, name: 'john', guild: 'back-end'},
+      {id: 3, name: 'jerry', guild: 'front-end'},
+      {id: 4, name: 'martin', guild: 'front-end'},
+      {id: 5, name: 'woody', guild: 'back-end'},
+      {id: 6, name: 'mila', guild: 'front-end'},
+      {id: 7, name: 'ray', guild: 'front-end'},
+      {id: 8, name: 'sunny', guild: 'front-end'},
+      {id: 9, name: 'unknown1', guild: 'back-end'},
+      {id: 10, name: 'unknown2', guild: 'back-end'},
     ];
     return {teams}
   }

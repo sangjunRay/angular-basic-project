@@ -1,1 +1,13 @@
-<p>devteam-search works!</p>
+<div class="search_container">
+  <label for="serach_box">팀원 검색 🔍</label>
+  <input  #searchBox id="serach_box" (input)="search(searchBox.value)" placeholder="팀원의 이름을 검색해주세요!" />
+
+  <ul>
+    <li *ngFor="let team of teams$ | async">
+      <a routerLink="/detail/{{team.id}}">
+        {{team.name}}
+      </a>
+    </li>
+  </ul>
+</div>
+

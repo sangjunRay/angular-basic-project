@@ -4,10 +4,37 @@
 
 span {
   padding: 1rem 0 1rem 0;
+  cursor: pointer;
 }
 
 .member_list {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input_container input {
+  all: unset;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid rgb(200,200,200);
+}
+
+button {
+  all: unset;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
 }

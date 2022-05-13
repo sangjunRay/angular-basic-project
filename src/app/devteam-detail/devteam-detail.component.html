@@ -4,5 +4,16 @@
     <span>아이디 {{team.id}}</span>
     <span>이름 {{team.name}}</span>
     <span>길드 {{team.guild}}</span>
+    <h3>프로필을 업데이트할 수 있습니다.</h3>
+    <div class="input_container">
+      <label for="team_name">이름</label>
+      <input id="team_name" [(ngModel)]="team.name" placeholder="이름을 입력해주세요!"/>
+    </div>
+    <div class="input_container">
+      <label for="team_guild">길드</label>
+      <input id="team_guild" [(ngModel)]="team.guild" placeholder="길드를 입력해주세요!"/>
+    </div>
+    <button (click)="save()">저장</button>
+    <button (click)="goBack()">돌아가기</button>
   </div>
 </div>

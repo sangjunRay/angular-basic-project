@@ -1,5 +1,18 @@
 <div class="team_list">
+  <h2>신규 멤버 등록🌱</h2>
+  <div>
+    <div class="input_container">
+      <label for="new-team">이름을 입력해주세요.</label>
+      <input id="new-team" #teamName/>
+    </div>
+    <div class="input_container">
+      <label for="new-guild">소속 길드를 입력해주세요.</label>
+      <input id="new-guild" #teamGuild/>
+    </div>
+    <button (click)="add(teamName.value, teamGuild.value); teamName.value = ''; teamGuild.value ='' ">등록</button>
+  </div>
+  <h1>개발 얼라이언스의 모든 인원입니다. 👀</h1>
   <div class="member_list" *ngFor="let team of teams">
-    <span>{{team.name}}</span>
+    <span routerLink="/detail/{{team.id}}"><b>{{team.name}}</b> / {{team.guild}}</span>
   </div>
 </div>
